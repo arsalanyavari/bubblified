@@ -5,13 +5,13 @@
 # written by hohmannr
 
 # SYMBOL CONSTANTS
-blub_left=''
-blub_right=''
+blub_left='\uE0B6'
+blub_right='\uE0B4'
 
-prompt_symbol='❯'
+prompt_symbol='\u276F'
 
 user_symbol='%n'
-user_machine_symbol=' 🐧'
+user_machine_symbol=' \u1F427'
 machine_symbol='%M'
 
 filepath_symbol='%~'
