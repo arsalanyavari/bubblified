@@ -8,14 +8,6 @@ A zsh-theme inspired by [agnoster](https://github.com/agnoster/agnoster-zsh-them
 
 ## Installation
 
-### Antigen
-
-Place the following line in the [right](https://github.com/zsh-users/antigen) spot of your `.zshrc`
-
-```
-antigen theme arsalanyavari/bubblified
-```
-
 
 ### Manual
 
@@ -23,12 +15,12 @@ antigen theme arsalanyavari/bubblified
 
 Get the sourcefile
 ```
-$ wget https://raw.githubusercontent.com/hohmannr/bubblified/master/bubblified.zsh-theme
+wget https://raw.githubusercontent.com/arsalanyavari/bubblified-ng/master/bubblified.zsh-theme
 ```
 
 Move it to your ohmyzsh theme folder
 ```
-$ mv bubblified.zsh-theme $ZSH/themes
+mv bubblified.zsh-theme $ZSH/themes
 ```
 
 Open your `.zshrc` and change the theme
@@ -85,16 +77,16 @@ This theme is built with customization in mind. This means that you should be ab
 
 Before customization please copy this theme to ohmyzsh's custom theme directory.
 ```
-$ cp $ZSH/themes/bubblified.zsh-theme $ZSH/custom/themes
+cp $ZSH/themes/bubblified.zsh-theme $ZSH/custom/themes
 ```
 
 Then edit the theme using your favorite editor, mine is neovim.
 ```
-$ nvim $ZSH/custom/themes/bubblified.zsh-theme
+nvim $ZSH/custom/themes/bubblified.zsh-theme
 ```
 To load the edited theme, restart your terminal emulator or source your `.zshrc`.
 ```
-$ source ~/.zshrc
+source ~/.zshrc
 ```
 
 ### Icons

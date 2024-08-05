@@ -173,17 +173,17 @@ ssh_bubble () {
 }
 
 preexec () {
-    (( $#_elapsed > 1000 )) && set -A _elapsed $_elapsed[-1000,-1]
-    typeset -ig _start=SECONDS
+    _start=$SECONDS
 }
+
 precmd () {
-   (( _start >= 0 )) && set -A _elapsed $_elapsed $(( SECONDS-_start ))
-   _start=-1
+    _time=$(( SECONDS-_start ))
 }
+
 exec_time_bubble() {
-    local hour=$((_elapsed[-1]/3600))
-    local minute=$((_elapsed[-1]%3600/60))
-    local second=$((_elapsed[-1]%3600%60))
+    local hour=$((_time/3600))
+    local minute=$((_time%3600/60))
+    local second=$((_time%3600%60))
 
     if [[ $minute -lt 10 ]]
     then
@@ -199,7 +199,7 @@ exec_time_bubble() {
     fi
 
     local out=""
-    if [[ $_elapsed[-1] > 0 ]]
+    if [[ $_time > 0 ]]
     then
         if [[ $hour -gt 0 ]]
         then
